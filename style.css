@@ -1,3 +1,21 @@
+@keyframes move_bg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px 0;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -65,6 +83,22 @@ html, body {
     color: #02B341;
   }
   
+  .demo__item_type_blur:hover {
+    box-shadow: 0 0 50px #366c49;
+  }
+
+  .demo__item_type_shift-shadow:hover {
+    box-shadow: 10px 10px 10px #366C49;
+  }
+
+  .demo__item_type_linear-gradient {
+    background-image: linear-gradient(#02B341, #fff);
+  }
+
+  .demo__item_type_radial-gradient {
+    background-image: radial-gradient(#02B341 15%, #fff 60%);
+  }
+
   .demo__item:nth-of-type(2n) {
     margin-right: 0;
   }
@@ -81,4 +115,133 @@ html, body {
     left: 15px;
     margin: 0;
   }
+
+  .keyframes {
+    background-color: #02B341;
+    color: #fff;
+  }
   
+  .keyframes__wrapper {
+    width: 490px;
+    margin: auto;
+    padding: 50px 0;
+  }
+
+
+  
+  .demo__item-keyframes {
+    box-sizing: border-box;
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    margin-right: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  
+  .demo__item-keyframes:nth-of-type(2n) {
+    margin-right: 0;
+  }
+  
+  .demo__item-keyframes:first-of-type, .demo__item:nth-of-type(2) {
+    margin-top: 0;
+  }
+  
+  .demo__row {
+    height: 64px;
+  }
+
+  .demo__row_size_xs {
+    animation: move_bg 5s linear infinite alternate;
+    background-image: url(https://pictures.s3.yandex.net/animation_topic/line_xs.svg);
+  }
+  
+  .demo__row_size_s {
+    animation: move_bg 3s linear infinite alternate;
+    background-image: url(https://pictures.s3.yandex.net/animation_topic/line_s.svg);
+  }
+
+  .demo__row_size_m {
+    animation: move_bg 5s linear infinite alternate;
+    background-image: url(https://pictures.s3.yandex.net/animation_topic/line_m.svg);
+  }
+
+  .demo__row_size_l {
+    animation: move_bg 8s linear infinite alternate;
+    background-image: url(https://pictures.s3.yandex.net/animation_topic/line_l.svg);
+  }
+
+  .dotted {
+    background-color: #EB483F;
+    color: white;
+  }
+  
+  .dotted__wrapper {
+    width: 490px;
+    margin: auto;
+    padding: 50px 0;
+    min-height: 350px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .animated {
+    width: 490px;
+    height: 350px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(0, 50%);
+  }
+  
+  .star {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .star_size_s {
+    width: 310px;
+    height: 310px;
+    margin-left: -155px;
+    margin-top: -155px;
+    animation: rotation 40s linear infinite;
+  }
+  
+  .star_size_l {
+    width: 420px;
+    height: 420px;
+    margin-left: -210px;
+    margin-top: -210px;
+    animation: rotation 30s linear infinite;
+  }
+  
+  .star_size_m {
+    width: 420px;
+    height: 420px;
+    margin-left: -210px;
+    margin-top: -210px;
+    animation: rotation 20s linear infinite;
+  }
+  
+  .dots {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 490px;
+    height: 460px;
+    margin-top: -245px;
+    margin-left: -230px;
+  }
+  
+  .dots_size_s {
+    animation: rotation 40s ease-in-out infinite;
+  }
+
+  .dots_size_m {
+    animation: rotation 30s ease-in-out infinite;
+  }
+
+  .dots_size_l {
+    animation: rotation 20s ease-in-out infinite;
+  }
